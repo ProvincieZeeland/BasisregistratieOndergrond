@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Provincie Zeeland - Test Merkator</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <!-- <link href="css/index.css" media="screen" rel="stylesheet" type="text/css" /> -->
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.90/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.90/Build/Cesium/Widgets/lighter.css" rel="stylesheet">
+    <!-- <link href="css/app.css" media="screen" rel="stylesheet" type="text/css" /> -->
+    <link href="css/bucket.css" rel="stylesheet">
+    <style>
+        .fullSize {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        #toolbar {
+            background: rgba(42, 42, 42, 0.8);
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+        #toolbar input {
+            vertical-align: middle;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cesiumContainer" class="fullSize"></div>
+    <div id="loadingOverlay" class="u-txt-center u-valign">
+        <div class="spinner spinner-quart u-malign"></div>
+    </div>
+
+    <div id="toolbar">
+        <input type="checkbox" value="true" data-bind="checked: showBHR, valueUpdate: 'input'">
+        BHR
+        <input type="checkbox" value="true" data-bind="checked: showGeoTop, valueUpdate: 'input'">
+        GeoTop
+        <select data-bind="options: geoTopVisualisations, value: currentGeoTopVisualisation"></select>
+    </div>
+
+    <div id="camera" style="display:none"></div>
+
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.90/Build/Cesium/Cesium.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script>
+        // for the hacky way of loading debounce below
+        window.module = window.module || {};
+    </script>
+    <script src="Source/debounce.js"></script>
+
+    <script src="Source/merkator.js"></script>
+</body>
+
+</html>
