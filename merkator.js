@@ -19,10 +19,7 @@ const viewModel = {
 	"use strict";
 
 
-	/**
-	 *  username: wko
-	 *  password: CesiumION
-	 */
+	
 	Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzNzFmNjQzYi1iOTBhLTQ3OTctYThjNy0xOWU4NWEwOTgyNTQiLCJpZCI6Mjc3MzEsInNjb3BlcyI6WyJhc2wiLCJhc3IiLCJhc3ciLCJnYyJdLCJpYXQiOjE1OTE3MDI2MzZ9.4MzPdhl4tZ8mo0uWgrVZlGLffdF-BRvqYn4hiO8-hnU';
 
 
